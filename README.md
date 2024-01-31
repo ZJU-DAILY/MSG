@@ -18,7 +18,7 @@ This repository contains the code, datasets, additional evaluations, and other r
 
 For index construction, MVG modularizes the computation acceleration and index compression, allowing easy plug-in/plug-out. The search procedure is adaptive and can accommodate any vector combination of a multi-vector query within a single index. MVG decouples the index layout and computation acceleration from the search procedure, ensuring the flexibility of diverse selections and further optimizations.
 
-![mvg_overview](./figures/mvg-overview.png)
+<img src="./figures/mvg-overview.png" alt="mvg_overview" style="zoom:20%;" />
 
 ## 4. Datasets
 
