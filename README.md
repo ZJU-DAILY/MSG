@@ -47,7 +47,7 @@ The detailed data format instructions can be found [here](./data/README.md).
 
 ## 5. Parameters
 
-For parameter analysis and used values in our experiments, please refer to our technical report ([APPENDIX II](https://github.com/ZJU-DAILY/MVG/blob/main/MVG_technical_report.pdf))
+For parameter analysis and parameter values used in our experiments, please refer to our technical report ([APPENDIX II](https://github.com/ZJU-DAILY/MVG/blob/main/MVG_technical_report.pdf))
 
 ## 6. Usage
 
