@@ -8,7 +8,7 @@ In our paper "MVG Index: Empowering Multi-Vector Similarity Search in High-Dimen
 
 This repository contains the code, datasets, additional evaluations, and other relevant details used in the experiments.
 
-## 2. Baseline
+## 2. Competitors
 
 * VBase ([OSDI'23](https://www.usenix.org/conference/osdi23/presentation/zhang-qianxi)): It leverages index scanning optimization with multiple single-vector indexes. Developed by Microsoft, it is the state-of-the-art MVSS method.
 * Milvus ([SIGMOD'21](https://dl.acm.org/doi/10.1145/3448016.3457550)): It applies candidate merging optimization with multiple single-vector indexes, released by Zilliz.
@@ -24,7 +24,7 @@ For index construction, MVG modularizes the computation acceleration and index c
 
 The detailed data format instructions can be found [here](./data/README.md).
 
-| Dataset                                                      | $n$ | $m$ or $t$   | $D_m$ | #$q$          | $w_i$         |
+| Dataset                                                      | $n$ | $m$ or $t$   | $D_m$ | \# $q$          | $w_i$         |
 | ------------------------------------------------------------ | ---------- | ---------- | ------- | ------------- | -------------- |
 | Recipe ([link](https://github.com/Catoverflow/VBASE-artifacts))       | 1.3M          | 2 | 2,048  | $10^4$  | 0.1/0.2 |
 | MIT-States ([link](http://web.mit.edu/phillipi/Public/states_and_transformations/index.html)) | 2.1M          | 6    | 3,456  |  $10^3$  | 0.2/0.15/0.2/0.1/0.2/0.15     |
@@ -40,7 +40,7 @@ The detailed data format instructions can be found [here](./data/README.md).
 > $m$ is the number of vectors in each object.
 > $t$ is the number of vectors in a multi-vector query.
 > $D_m$ is the total vector dimension in an object.
-> #$q$ is the number of queries.
+> \# $q$ is the number of queries.
 > $w_i$ is the weight of the $i$-th vector distance.
 
 > Since the original data scale is small (e.g., the scale of CelebA is merely 200K), we expand the datasets using generative models ([Edwards, et al. 2022](https://aclanthology.org/2022.dash-1.8/), [Yang, et al. 2020](https://aclanthology.org/2020.findings-emnlp.90/)), which allows us to create additional samples from the learned distribution of the real data.
