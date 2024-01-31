@@ -12,3 +12,5 @@ We utilize two different file formats:
 **.ftensors and .itensors file formats:**
 
 The data is stored in binary format. It begins with the number of objects, $n$, followed by the number of vectors within an object, $m$. Then, it consists of $m$ dimensional values of vectors in each object, and $m$ weights for each vector. Finally, there are $n$ rows of vector data, each containing all vectors in an object.
+
+The `.ftensors` and `.itensors` formats share the same structure as described above, but they differ in the type of vector data they store. In the `.ftensors` format, the vector data is of floating-point type, while in the `.itensors` format, the vector data is of integer type.

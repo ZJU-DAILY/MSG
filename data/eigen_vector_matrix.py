@@ -76,6 +76,6 @@ if __name__ == "__main__":
         P = EigenVectorMatrix(cur_X, cur_X.shape[1])
         time_end=time.time()
         print(P)
-        projection_path = f'../data/Sample/Sample_EigenVectorMatrix_{i}.ftensors'
+        projection_path = f'../data/Sample/Sample_EigenVectorMatrix.ftensors_{i}'
         to_ftensors(projection_path, P)
         i += 1

@@ -45,6 +45,6 @@ if __name__ == "__main__":
     i = 0
     for d in dvec:
         P = RandomMatrix(d)
-        projection_path = f'../data/Sample/Sample_RandomMatrix_{i}.ftensors'
+        projection_path = f'../data/Sample/Sample_RandomMatrix.ftensors_{i}'
         i += 1
         to_ftensors(projection_path, P)
