@@ -80,11 +80,11 @@ cd ./script
 ./search_msg.sh
 ```
 
-## 7. Selected Results
+## 6. Selected Results
 
 Search performance of multi-vector queries for different methods (Latency : ms). The bold values are the best.
 ![msg_overview](./figures/msg-performance.png)
 
-## 8. Acknowledgments
+## 7. Acknowledgments
 
 We express our gratitude for the [ADSampling](https://github.com/gaoj0017/ADSampling) repository, which greatly inspires our implementation.

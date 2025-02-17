@@ -1,4 +1,4 @@
-# Datasets for multi-vector similarity search
+# Datasets for multi-vector search
 
 Each dataset comprises three subsets of objects:
 * Base data: the data in which the search is performed. Each element contains $m$ vectors.

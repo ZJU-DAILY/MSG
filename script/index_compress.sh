@@ -14,6 +14,6 @@ data_path=./data/${data}
 index_path=./data/${data}
 
 data_file="${data_path}/${data}_base.ftensors"
-index_file="${index_path}/${data}_ef${efConstruction}_M${M}.index_mvg"
-compress_index_file="${index_path}/${data}_ef${efConstruction}_M${M}.index_compress_mvg"
+index_file="${index_path}/${data}_ef${efConstruction}_M${M}.index_msg"
+compress_index_file="${index_path}/${data}_ef${efConstruction}_M${M}.index_compress_msg"
 ./src/index_compress -d $data_file -i $index_file -e $efConstruction -m $M -c $compress_index_file
