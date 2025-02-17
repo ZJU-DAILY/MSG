@@ -1,24 +1,24 @@
-# Source Code for "MSG: Empowering High-Dimensional Multi-Vector Search"
+# Source Code for "Empowering High-Dimensional Multi-Vector Search"
 
 ## 1. Introduction
 
-Multi-Vector Search (MVS) is designed to handle multi-modal or multi-view data, especially with the emergence of multi-modal large language models. In this context, an object or query contains multiple vectors, and similarity between objects involves distances from multiple vector pairs. Existing Vector Search (VS) methods, like HNSW, can only handle VS with one vector in a query or object. Recent studies addressing MVS through VS on multiple singe-space indexes often suffer from inefficiency and inaccuracy, primarily due to the intrinsic limitations of single-space indexes.
+Multi-Vector Search (MVS) is designed to manage multi-modal or multi-view data, particularly in light of the rise of multi-modal large language models. In this context, an object or query comprises multiple vectors, and similarity between objects is determined by distances across multiple vector pairs. Existing Vector Search (VS) methods, such as HNSW, are limited to handling queries or objects with a single vector. Recent approaches to MVS, which rely on VS using multiple single-space indexes, often face challenges in efficiency and accuracy, largely due to the inherent constraints of single-space indexes.
 
-In our paper "MSG: Empowering High-Dimensional Multi-Vector Search", we introduce a specialized Multi-Space Graph index, named MSG, explicitly designed to tackle the MVS problem. A more detailed technical report can be found [here](https://anonymous.4open.science/api/repo/MSG/file/MSG_technical_report.pdf?v=0a8d764c).
+In our paper, *Empowering High-Dimensional Multi-Vector Search*, we propose a novel Multi-Space Graph index, termed MSG, specifically designed to address the MVS problem.
 
-This repository contains the code, datasets, additional evaluations, and other relevant details used in the experiments.
+This repository provides the source code, datasets, and additional implementation details used in the experiments.
 
 ## 2. Competitors
 
-* VBase ([OSDI'23](https://www.usenix.org/conference/osdi23/presentation/zhang-qianxi)): It leverages index scanning optimization with multiple single-space indexes. Developed by Microsoft, it is the state-of-the-art MVS method.
-* Milvus ([SIGMOD'21](https://dl.acm.org/doi/10.1145/3448016.3457550)): It applies candidate merging optimization with multiple single-space indexes, released by Zilliz.
-* Merging ([TPAMI'14](https://ieeexplore.ieee.org/document/6873347), [IR'05](https://link.springer.com/article/10.1007/s10791-005-6994-4)): It is a previous MVS method for hybrid queries and also depends on multiple single-space indexes.
+* VBase ([OSDI'23](https://www.usenix.org/conference/osdi23/presentation/zhang-qianxi)): VBase, developed by Microsoft, represents the state-of-the-art in Multi-Vector Search (MVS) methodologies. It employs index scanning optimization across multiple single-space indexes to enhance search efficiency and accuracy. This approach positions VBase as a leading solution in the field, particularly for handling complex multi-modal or multi-view data.
+* Milvus ([SIGMOD'21](https://dl.acm.org/doi/10.1145/3448016.3457550)): Milvus, released by Zilliz, utilizes candidate merging optimization with multiple single-space indexes to address the challenges of MVS. This method focuses on improving the scalability and performance of the merging operation, making it a robust tool for applications requiring multi-vector processing.
+* Merging ([TPAMI'14](https://ieeexplore.ieee.org/document/6873347), [IR'05](https://link.springer.com/article/10.1007/s10791-005-6994-4)): Merging is an earlier MVS technique designed for hybrid queries, relying on multiple single-space indexes to compute similarities. While it laid the groundwork for modern MVS approaches, its reliance on simple merging operation introduces limitations in efficiency and accuracy compared to more recent advancements. Nonetheless, it remains a foundational method in the evolution of MVS technologies.
 
 ## 3. MSG Overview
 
-For index construction, MSG modularizes the computation acceleration and index compression, allowing easy plug-in/plug-out. The search procedure is adaptive and can accommodate any multi-vector query with various vector combinations and weights in a single index. MSG decouples the index layout and computation acceleration from the search procedure, ensuring the flexibility of diverse selections and further optimizations.
+The Multi-Space Graph (MSG) index introduces a modular architecture that separates computation acceleration and index compression, enabling seamless integration and removal of components as needed. This design ensures adaptability, allowing MSG to efficiently handle multi-vector queries with diverse vector combinations and weighting schemes within a unified index framework. By decoupling the index layout and computation acceleration from the search procedure, MSG provides unparalleled flexibility, facilitating diverse configuration choices and enabling further optimizations tailored to specific use cases. This modular and adaptive approach positions MSG as a versatile and scalable solution for high-dimensional multi-vector search challenges.
 
-<img src="./figures/msg-overview.png" alt="msg_overview" width="50%" height="50%" />
+<img src="./figures/msg-overview.png" alt="msg_overview" width="100%" height="50%" />
 
 ## 4. Datasets
 
@@ -45,11 +45,7 @@ The detailed data format instructions can be found [here](./data/README.md).
 
 > Since the original data scale is small (e.g., the scale of CelebA is merely 200K), we expand the datasets using generative models ([Edwards, et al. 2022](https://aclanthology.org/2022.dash-1.8/), [Yang, et al. 2020](https://aclanthology.org/2020.findings-emnlp.90/)), which allows us to create additional samples from the learned distribution of the real data.
 
-## 5. Parameters
-
-For parameter analysis and parameter values used in our experiments, please refer to our technical report ([APPENDIX III](https://anonymous.4open.science/api/repo/MSG/file/MSG_technical_report.pdf?v=0a8d764c))
-
-## 6. Usage
+## 5. Usage
 
 ### (1) Prerequisites
 
@@ -86,7 +82,7 @@ cd ./script
 
 ## 7. Selected Results
 
-Multi-Vector Query Performance (Latency: ms)
+Search performance of multi-vector queries for different methods (Latency : ms). The bold values are the best.
 ![msg_overview](./figures/msg-performance.png)
 
 ## 8. Acknowledgments
