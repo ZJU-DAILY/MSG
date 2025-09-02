@@ -26,7 +26,6 @@ def fast_read_ftensors(filename):
 
     return data.reshape(-1, total_d), dvec
 
-
 def to_ftensors(filename, data):
     print(f"Writing File - {filename}")
     with open(filename, 'wb') as fp:

@@ -119,7 +119,6 @@ namespace tensor_dist {
         return res;
     }
 
-
     float full_dist_build(const void *data1, const void *data2, int cur_combi_code = 0) {
         float * d1 = (float *) data1;
         float * d2 = (float *) data2;

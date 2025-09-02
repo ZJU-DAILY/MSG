@@ -1,10 +1,10 @@
-# Source Code for "Empowering High-Dimensional Multi-Vector Search"
+# Source Code for "MSG: a unified multi-space graph index for efficient high-dimensional multi-vector search"
 
 ## 1. Introduction
 
 Multi-Vector Search (MVS) is designed to manage multi-modal or multi-view data, particularly in light of the rise of multi-modal large language models. In this context, an object or query comprises multiple vectors, and similarity between objects is determined by distances across multiple vector pairs. Existing Vector Search (VS) methods, such as HNSW, are limited to handling queries or objects with a single vector. Recent approaches to MVS, which rely on VS using multiple single-space indexes, often face challenges in efficiency and accuracy, largely due to the inherent constraints of single-space indexes.
 
-In our paper, *Empowering High-Dimensional Multi-Vector Search*, we propose a novel Multi-Space Graph index, termed MSG, specifically designed to address the MVS problem.
+In our paper, *MSG: a unified multi-space graph index for efficient high-dimensional multi-vector search*, we propose a novel Multi-Space Graph index, termed MSG, specifically designed to address the MVS problem.
 
 This repository provides the source code, datasets, and additional implementation details used in the experiments.
 
@@ -82,7 +82,7 @@ cd ./script
 
 ## 6. Selected Results
 
-Search performance of multi-vector queries for different methods (Latency : ms). The bold values are the best.
+Search performance of multi-vector queries for different methods (Latency : ms). For each dataset, we report Recall@10 (R) and Latency in milliseconds (L). Best results are in bold.
 ![msg_overview](./figures/msg-performance.png)
 
 ## 7. Acknowledgments

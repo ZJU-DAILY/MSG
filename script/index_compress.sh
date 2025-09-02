@@ -7,7 +7,6 @@ efConstruction=500
 M=16
 data='Sample'
 
-
 echo "Indexing - ${data}"
 
 data_path=./data/${data}
